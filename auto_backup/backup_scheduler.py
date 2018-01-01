@@ -155,7 +155,7 @@ password=passwordLogin,port=portHost)
                 except:
                     raise
                 #Create name for dumpfile.
-                bkp_file='%s_%s.%s' % (time.strftime('%d_%m_%Y_%H_%M_%S'),rec.name, rec.backup_type)
+                bkp_file='%s_%s.%s' % (time.strftime('%Y%m%dT%H%M%S'),rec.name, rec.backup_type)
                 file_path = os.path.join(rec.bkp_dir,bkp_file)
                 uri = 'http://' + rec.host + ':' + rec.port
                 bkp=''
